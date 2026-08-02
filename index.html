@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#050505">
+  <title>Благодарим Ви | Уинърс Ипотека</title>
+  <meta name="description" content="Споделете мнението си и получете личен код за препоръка от Уинърс Ипотека.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="assets/vendor/qrcode.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.7 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3-5.6-3-5.6 3 1.1-6.3-4.6-4.5 6.3-.9L12 2.7Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.3 10.9 7.4-4.6M8.3 13.1l7.4 4.6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 9h18v12H3zM12 9v12M3 13h18"/><path d="M12 9H8.2A2.2 2.2 0 1 1 10 5.6L12 9Zm0 0h3.8A2.2 2.2 0 1 0 14 5.6L12 9Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M8 3 5 5c-1 1-.5 4.5 3.5 8.5S16 18 17 17l2-3-4-2-1.5 2c-1.7-.8-2.7-1.8-3.5-3.5L12 9 8 3Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"/><path d="M5 10v11h14V10M9 21v-7h6v7"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3zM18 14h3M14 18v3"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Към съдържанието</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a href="./" class="brand" aria-label="Winners Group">
+        <img src="assets/logo/winners-logo-official.jpg" alt="Winners Group – We Change The Game">
+      </a>
+      <div class="header-right">
+        <span>Благодарим за доверието</span>
+        <button id="demo-reset" class="gold-link" type="button" hidden>Нулирай теста</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="staff-view" class="staff-view" hidden>
+      <div class="shell staff-grid">
+        <div class="staff-copy">
+          <p class="eyebrow">QR 1 · от консултанта към клиента</p>
+          <h1>QR към благодарността<br><span>и кратката анкета</span></h1>
+          <p class="lead">Това е личният QR на <strong id="staff-consultant-name">Даниела Караконов</strong>. Изпраща се на клиента, след като ипотечният кредит е усвоен.</p>
+          <div class="staff-fields">
+            <label>Име на клиента <small>по избор</small><input id="staff-client-name" type="text" maxlength="40" placeholder="Например: Иван"></label>
+            <label>Клиентски номер <small>препоръчително</small><input id="staff-client-id" type="text" maxlength="40" placeholder="Например: 1042"></label>
+          </div>
+          <p class="fine">Клиентският номер прави връзката постоянна. Името служи само за лично обръщение в началото на страницата.</p>
+          <div class="action-row">
+            <button id="staff-copy-link" class="btn btn-gold" type="button"><svg><use href="#i-copy"></use></svg>Копирай линка</button>
+            <button id="staff-download-qr" class="btn btn-outline" type="button"><svg><use href="#i-download"></use></svg>Изтегли QR 1</button>
+            <a id="staff-open-link" class="btn btn-outline" href="#" target="_blank" rel="noopener">Отвори страницата</a>
+          </div>
+        </div>
+        <aside class="staff-qr-card">
+          <span class="qr-number">QR 1</span>
+          <div id="staff-survey-qr" class="qr-box" aria-label="QR към клиентската анкета"></div>
+          <strong>Към анкетата</strong>
+          <p>Консултант → обслужения клиент</p>
+          <label for="staff-survey-url">Линк за изпращане</label>
+          <div class="copy-field"><input id="staff-survey-url" readonly><button id="staff-copy-field" type="button" aria-label="Копирай линка"><svg><use href="#i-copy"></use></svg></button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="referral-arrival" class="arrival" hidden>
+      <div class="shell arrival-grid">
+        <div>
+          <p class="eyebrow">QR 2 · лична препоръка</p>
+          <h1>Препоръчаха Ви<br><span id="arrival-consultant-name">Даниела Караконов</span></h1>
+          <p class="lead">Ваш близък Ви насочва към консултанта, който му е съдействал при ипотечния кредит. Тази страница е неговата дигитална визитка.</p>
+          <div class="ref-code"><span>Код на препоръката</span><strong id="incoming-ref-code">WG-XXXX-XXXX</strong></div>
+          <div class="arrival-contacts">
+            <a id="arrival-phone" href="#"><svg><use href="#i-phone"></use></svg><span></span></a>
+            <a id="arrival-email" href="#"><svg><use href="#i-mail"></use></svg><span></span></a>
+            <a id="arrival-website" href="#" target="_blank" rel="noopener"><svg><use href="#i-link"></use></svg><span></span></a>
+            <div><svg><use href="#i-home"></use></svg><span id="arrival-address"></span></div>
+          </div>
+          <div class="action-row">
+            <a class="btn btn-gold" id="ref-call" href="#"><svg><use href="#i-phone"></use></svg>Обадете се</a>
+            <a class="btn btn-outline" id="ref-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-outline" id="ref-viber" href="#">Viber</a>
+            <a class="btn btn-outline" id="ref-email" href="#"><svg><use href="#i-mail"></use></svg>Имейл</a>
+          </div>
+          <p class="fine">Кодът пази връзката с човека, който Ви е препоръчал. Подаръкът му се активира, когато станете клиент на Уинърс Ипотека за ипотечен кредит.</p>
+        </div>
+        <aside class="consultant-card">
+          <img class="consultant-logo" src="assets/logo/winners-logo-official.jpg" alt="Winners Group">
+          <span class="gold-line"></span>
+          <strong id="arrival-card-name">ДАНИЕЛА<br>КАРАКОНОВА</strong>
+          <small id="arrival-card-role">ИПОТЕЧЕН КОНСУЛТАНТ</small>
+          <div class="consultant-icon"><svg><use href="#i-home"></use></svg></div>
+          <p>Ясно решение.<br>Лично съдействие.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div id="client-experience">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Уинърс Ипотека · Ипотечни кредити</p>
+            <h1 id="hero-title">Благодарим Ви<br><span>за доверието</span></h1>
+            <p class="lead">Благодарим Ви, че се доверихте на Уинърс Ипотека и <strong id="hero-consultant-name">Даниела Караконов</strong>, и ще сме Ви благодарни, ако отделите по-малко от минута, за да отговорите на три кратки въпроса.</p>
+            <div class="gift-teaser gift-teaser-simple">
+              <div class="gift-teaser-icon"><svg><use href="#i-gift"></use></svg></div>
+              <strong id="intro-gift-text">Попълнете 3 кратки въпроса и отключете своя подарък.</strong>
+            </div>
+            <div class="hero-actions">
+              <button id="start-survey" class="btn btn-gold" type="button">Споделете мнението си <svg><use href="#i-arrow"></use></svg></button>
+              <span class="time-chip"><svg><use href="#i-clock"></use></svg>3 въпроса · под 1 минута</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="survey" class="survey-section">
+        <div class="shell narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow">Вашето мнение</p>
+            <h2>Три кратки въпроса</h2>
+          </div>
+
+          <div id="survey-card" class="survey-card reveal">
+            <div class="progress-meta"><span id="question-counter">Въпрос 1 от 3</span><strong id="progress-percent">33%</strong></div>
+            <div class="progress"><span id="progress-bar"></span></div>
+
+            <form id="survey-form" novalidate>
+              <fieldset class="question active" data-step="1">
+                <legend>Как оценявате цялостната ни работа?</legend>
+                <p class="question-help">Изберете от 1 до 5.</p>
+                <div class="rating-grid" role="radiogroup" aria-label="Оценка">
+                  <button type="button" data-rating="1" aria-pressed="false"><svg><use href="#i-star"></use></svg><span>1</span><small>Не съм доволен</small></button>
+                  <button type="button" data-rating="2" aria-pressed="false"><svg><use href="#i-star"></use></svg><span>2</span><small>По-скоро не</small></button>
+                  <button type="button" data-rating="3" aria-pressed="false"><svg><use href="#i-star"></use></svg><span>3</span><small>Неутрално</small></button>
+                  <button type="button" data-rating="4" aria-pressed="false"><svg><use href="#i-star"></use></svg><span>4</span><small>Много добре</small></button>
+                  <button type="button" data-rating="5" aria-pressed="false"><svg><use href="#i-star"></use></svg><span>5</span><small>Напълно доволен</small></button>
+                </div>
+                <div class="question-actions end"><button class="btn btn-gold next" data-next="2" type="button">Напред <svg><use href="#i-arrow"></use></svg></button></div>
+              </fieldset>
+
+              <fieldset class="question" data-step="2" hidden>
+                <legend>Получавахте ли ясна и навременна информация?</legend>
+                <div class="choice-grid" role="radiogroup" aria-label="Ясна информация">
+                  <button type="button" data-info="yes" aria-pressed="false"><svg><use href="#i-check"></use></svg><span>Да</span></button>
+                  <button type="button" data-info="partly" aria-pressed="false"><span class="symbol">½</span><span>Частично</span></button>
+                  <button type="button" data-info="no" aria-pressed="false"><span class="symbol">×</span><span>Не</span></button>
+                </div>
+                <div class="question-actions"><button class="btn btn-text back" data-back="1" type="button">Назад</button><button class="btn btn-gold next" data-next="3" type="button">Напред <svg><use href="#i-arrow"></use></svg></button></div>
+              </fieldset>
+
+              <fieldset class="question" data-step="3" hidden>
+                <legend>Бихте ли ни препоръчали?</legend>
+                <div class="recommend-grid" role="radiogroup" aria-label="Бихте ли ни препоръчали">
+                  <button type="button" data-recommend="yes" aria-pressed="false"><span class="recommend-mark">ДА</span><small>Да, с удоволствие</small></button>
+                  <button type="button" data-recommend="no" aria-pressed="false"><span class="recommend-mark">НЕ</span><small>Не на този етап</small></button>
+                </div>
+                <div class="question-actions"><button class="btn btn-text back" data-back="2" type="button">Назад</button><button class="btn btn-gold" id="submit-survey" type="submit">Изпрати и виж подаръка <svg><use href="#i-gift"></use></svg></button></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="success-section" class="success-section" hidden aria-live="polite">
+        <div class="shell narrow">
+          <div class="success-card">
+            <div class="success-check"><svg><use href="#i-check"></use></svg></div>
+            <p class="eyebrow">Благодарим Ви</p>
+            <h2>Благодарим Ви!</h2>
+            <p id="success-message">Мнението Ви е получено. Подаръкът Ви е подготвен.</p>
+            <button id="repeat-survey" class="btn btn-outline" type="button">Попълни отново</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="referral-section" class="referral-section" hidden>
+        <div class="shell referral-grid">
+          <div class="referral-copy reveal">
+            <p class="eyebrow">Вашият подарък</p>
+            <h2><span data-discount>20%</span> отстъпка<br><span>за избрана застраховка</span></h2>
+            <p class="reward-copy" id="referral-thank-you-text">Вашата препоръка заслужава благодарност. При доведен клиент получавате своя подарък.</p>
+            <div id="product-tags" class="tags"></div>
+          </div>
+
+          <div class="share-card reveal">
+            <div class="personal-code"><span>Номер на подаръка</span><strong id="referral-code">WG-XXXX-XXXX</strong></div>
+            <span class="qr-number">QR към консултанта</span>
+            <div id="personal-qr" class="qr-box" aria-label="QR към дигиталната визитка на консултанта"></div>
+            <p class="qr-explain">Този QR и линкът отварят дигиталната визитка на <strong id="referral-consultant-name">Даниела Караконов</strong> и пазят номера на Вашия подарък.</p>
+            <label for="referral-url">Линк към консултанта</label>
+            <div class="copy-field"><input id="referral-url" readonly><button id="copy-link" type="button" aria-label="Копирай линка"><svg><use href="#i-copy"></use></svg></button></div>
+            <div class="share-actions">
+              <button id="native-share" class="btn btn-gold" type="button"><svg><use href="#i-share"></use></svg>Сподели</button>
+              <button id="download-qr" class="btn btn-outline" type="button"><svg><use href="#i-download"></use></svg>Изтегли QR</button>
+            </div>
+            <div class="channel-links">
+              <a id="share-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+              <a id="share-viber" href="#">Viber</a>
+              <a id="share-email" href="#">Имейл</a>
+              <button id="copy-link-text" type="button">Копирай</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner"><div><strong>УИНЪРС ИПОТЕКА</strong><span>WE CHANGE THE GAME</span></div><p>Благодарим Ви за доверието.</p><a href="https://www.winnersgroup.bg/" target="_blank" rel="noopener">winnersgroup.bg</a></div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
