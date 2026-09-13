@@ -25,7 +25,6 @@ const CONFIG = Object.freeze({
   referralStorageKey: "winners_referral_v4",
   prototypeOpen: true,
   introGiftText: "Попълнете 3 кратки въпроса и отключете своя ваучер.",
-  referralThankYouText: "Вашата препоръка заслужава благодарност. При доведен клиент получавате своя ваучер.",
   brandWebsite: "https://www.winnersgroup.bg/",
   referralShareText:
     "Здравей! Ако обмисляш ипотечен кредит, препоръчвам ти Даниела Караконов от Уиннърс Ипотека. Ето нейната дигитална визитка:",
