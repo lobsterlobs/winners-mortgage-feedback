@@ -165,7 +165,7 @@
     state.clearInformation = null;
     state.wouldRecommend = null;
     $$("[data-rating],[data-info],[data-recommend]").forEach((button) => button.setAttribute("aria-pressed", "false"));
-    $("submit-survey").innerHTML = 'Изпрати и виж подаръка <svg><use href="#i-gift"></use></svg>';
+    $("submit-survey").innerHTML = 'Изпрати и виж ваучера <svg><use href="#i-gift"></use></svg>';
     $("survey-card").hidden = false;
     $("success-section").hidden = true;
     $("referral-section").hidden = true;
@@ -183,7 +183,6 @@
       return span;
     });
     $("product-tags").replaceChildren(...tags);
-    $$('[data-discount]').forEach((element) => { element.textContent = `${CONFIG.discountPercent}%`; });
   }
 
   function generateQrCode() {
@@ -236,7 +235,7 @@
     const text = `${CONFIG.referralShareText} ${state.referralUrl}`;
     if (navigator.share) {
       try {
-        await navigator.share({ title: "Уинърс Ипотека", text, url: state.referralUrl });
+        await navigator.share({ title: "Уиннърс Ипотека", text, url: state.referralUrl });
         return;
       } catch (error) {
         if (error.name === "AbortError") return;
@@ -263,7 +262,7 @@
     $("success-section").hidden = false;
     updateReferral();
     $("referral-section").hidden = false;
-    $("success-message").textContent = "Мнението Ви е получено. По-долу ще видите подаръка, линка към Вашия консултант и неговия номер.";
+    $("success-message").textContent = "Мнението Ви е получено. По-долу ще видите ваучера, линка към Вашия консултант и неговия номер.";
     $("success-section").scrollIntoView({ behavior: "smooth" });
   }
 
